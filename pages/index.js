@@ -1,7 +1,7 @@
 /*
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: M.re c1029mq@qq.com
- * @LastEditTime: 2022-09-02 15:59:06
+ * @LastEditTime: 2022-09-02 17:00:00
  * @FilePath: /uuspy-website-node/pages/index.js
  */
 import Head from 'next/head';
@@ -39,19 +39,20 @@ export default function Home (data) {
     }
   }
   return (
-    <div className={styles.container}>
+    <div className={styles.container_pc}>
       <Head>
         <title>{data.title}</title>
         <link rel="icon" href={data.favicon} />
       </Head>
+      
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <h1 className={styles.h1_title}>
           Welcome<button onClick={handleChangeLanguage}>{locale}</button>
           {t('footer.end')}
         </h1>
 
         <Link href="/posts">
-          <a>路由1</a>
+          <a className={styles.a_link}>跳转到post</a>
         </Link>
         <p className={styles.description}>
           Get started by editing{' '}

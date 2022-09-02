@@ -10,6 +10,7 @@ $fontWeight: 500;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   @content;
 }
+
 @mixin colors($color: $primary-color) {
   background-color: $color;
   border-color: $color;
@@ -75,7 +76,17 @@ $f: 30;
   $f: $f - 1;
 }
 @mixin base {
-  .base-size {
+  .base_size {
     min-width: 320px;
   }
+}
+@function mz($size) {
+  @return $size / (750/1920);
+}
+@function pc($block) {
+  @return $block + '_pc';
+}
+
+@function m($block) {
+  @return $block + '_m';
 }

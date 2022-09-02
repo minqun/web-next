@@ -31,5 +31,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/check/index.js"  ]
+, "pages/check/index.js", "pages/_document.js"  ]
 }
