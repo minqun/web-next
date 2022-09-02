@@ -1,7 +1,7 @@
 /*
  * @Date: 1985-10-26 16:15:00
  * @LastEditors: M.re c1029mq@qq.com
- * @LastEditTime: 2022-09-02 17:14:44
+ * @LastEditTime: 2022-09-02 17:59:06
  * @FilePath: /uuspy-website-node/styles/Home.module.scss
  */
 @import '@/styles/variables.module';
@@ -13,6 +13,9 @@
 #{pc('.container')} {
   padding: 0;
   padding-top: 70px;
+  @include dv1024 {
+    padding-top: 20px;
+  }
 }
 #{m('.container')} {
   padding: 10px;
