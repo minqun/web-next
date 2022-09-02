@@ -1,0 +1,81 @@
+$font-color: #2b2b2b;
+$primary-color: #64FF00;
+$fontSize: 14px;
+$radius: 4px;
+$fontWeight: 500;
+@mixin fontSet($size: $fontSize, $weight: $fontWeight, $color: $font-color) {
+  font-size: $size;
+  color: $color;
+  font-weight:  $weight;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  @content;
+}
+@mixin colors($color: $primary-color) {
+  background-color: $color;
+  border-color: $color;
+
+  @content;
+}
+@mixin dv3753 (){
+  @media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+@mixin dv3752 (){
+  @media screen and (max-width: 375px) and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+}
+@mixin dv320 (){
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+@mixin dv414 (){
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}
+@mixin dv768 (){
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin dv1024 (){
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin dv1280 (){
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+$i: 10;
+@while $i > 0 {
+  .grid-#{$i} { width: 10% * $i; }
+
+  $i: $i - 1;
+}
+$f: 30;
+@while $i > 0 {
+  .gt-#{$f} {
+    margin-top: 1px * $f; 
+  }
+  .gb-#{$f} {
+    margin-top: 1px * $f; 
+  }
+  .gl-#{$f} {
+    margin-top: 1px * $f; 
+  }
+  .gr-#{$f} {
+    margin-top: 1px * $f; 
+  }
+  $f: $f - 1;
+}
+@mixin base {
+  .base-size {
+    min-width: 320px;
+  }
+}
