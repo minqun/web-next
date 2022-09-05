@@ -10,6 +10,21 @@ $fontWeight: 500;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   @content;
 }
+@mixin base {
+  .base_size {
+    min-width: 320px;
+  }
+}
+@function mz($size) {
+  @return $size / (750/1920);
+}
+@function pc($block) {
+  @return $block + '_pc';
+}
+
+@function m($block) {
+  @return $block + '_m';
+}
 
 @mixin colors($color: $primary-color) {
   background-color: $color;
@@ -74,19 +89,4 @@ $f: 30;
     margin-top: 1px * $f; 
   }
   $f: $f - 1;
-}
-@mixin base {
-  .base_size {
-    min-width: 320px;
-  }
-}
-@function mz($size) {
-  @return $size / (750/1920);
-}
-@function pc($block) {
-  @return $block + '_pc';
-}
-
-@function m($block) {
-  @return $block + '_m';
 }

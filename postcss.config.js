@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-08-31 12:53:20
  * @LastEditors: M.re c1029mq@qq.com
- * @LastEditTime: 2022-09-02 17:12:10
+ * @LastEditTime: 2022-09-05 09:38:20
  * @FilePath: /uuspy-website-node/postcss.config.js
  */
 const viewDevice = {
@@ -12,7 +12,7 @@ const viewDevice = {
     propList: ['*'], // 指定转换的css属性的单位，*代表全部css属性的单位都进行转换
     viewportUnit: 'vw', // 指定需要转换成的视窗单位，默认vw
     fontViewportUnit: 'vw', // 指定字体需要转换成的视窗单位，默认vw
-    selectorBlackList: ['base_size'], // 指定不转换为视窗单位的类名，
+    selectorBlackList: ['base_size', '_notran'], // 指定不转换为视窗单位的类名，
     minPixelValue: 1, // 默认值1，小于或等于1px则不进行转换
     mediaQuery: true, // 是否在媒体查询的css代码中也进行转换，默认false
     replace: true, // 是否转换后直接更换属性值
